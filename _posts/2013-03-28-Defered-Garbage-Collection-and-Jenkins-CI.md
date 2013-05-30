@@ -2,7 +2,7 @@
 layout: post
 title:  "Deferred Garbage Collection and Jenkins CI"
 date:   2013-05-29 17:48:40
-categories: jenkins ci testing
+categories: jenkins ci testing optimization
 ---
 After finding the helpful [article][dgc-article] on deferred garbage collection from the
 awesome ariejan.net I immediately put it into practice. After all, who can

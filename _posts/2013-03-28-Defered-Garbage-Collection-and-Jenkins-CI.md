@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Deferred Garbarge Collection and Jenkins CI"
+title:  "Deferred Garbage Collection and Jenkins CI"
 date:   2013-05-29 17:48:40
 categories: jenkins ci testing
 ---

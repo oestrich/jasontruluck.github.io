@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Defered Garbarge Collection and Jenkins CI"
+title:  "Deferred Garbarge Collection and Jenkins CI"
 date:   2013-05-29 17:48:40
 categories: jenkins ci testing
 ---
-After finding the helpful [article][dgc-article] on defered garbage collection from the
+After finding the helpful [article][dgc-article] on deferred garbage collection from the
 awesome ariejan.net I immediately put it into practice. After all, who can
 resist nearly free test optimization! Everything worked perfectly. I was seeing
 the test time cut nearly in half score! 
@@ -20,7 +20,7 @@ painfully obvious), I was getting only an error that looked like:
 It was pretty apparent that the process was being reaped for one reason or
 another but I could not out my finder on it since it seemed almost random where
 it would be reaped. It was not tied to a specfic test or even an entire batch of
-them. It was not untill I remembered the defered garbage collection. Right then it hit me like a ton of bricks, of course! I am
+them. It was not untill I remembered the deferred garbage collection. Right then it hit me like a ton of bricks, of course! I am
 preventing the garbage collector from cleaning up after my code in memory so it is
 destroying my available memory. 
 
@@ -54,7 +54,7 @@ only a CI server after all - and minimizing the memory footprint would help so I
 do not have to tweak little settings every time I add some test. 
 
 To accomplish this is incredibly simple. In your spec helper just wrap the
-defered garbage collection script in an if statement where providing an
+deferred garbage collection script in an if statement where providing an
 environment variable will prevent defering the garbage collection. 
 
 {% highlight ruby %}

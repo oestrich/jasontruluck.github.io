@@ -40,7 +40,7 @@ with user input you will have to pay attention for things like adding users.
 To get everything going just ssh into your box and do the following:
 
 {% highlight ruby %}
-  vim setup.ssh
+  vim setup.sh
 {% endhighlight %}
 
 paste the script from the gist
